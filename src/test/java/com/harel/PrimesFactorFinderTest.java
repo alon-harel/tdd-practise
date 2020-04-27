@@ -1,6 +1,6 @@
 package com.harel;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,77 +8,77 @@ import java.util.Collections;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class PrimesFactorFinderTest {
+class PrimesFactorFinderTest {
 
     private final PrimesFactorFinder primesFactorFinder = new PrimesFactorFinder();
 
     @Test
-    public void shouldFindPrimesOf1() {
+    void shouldFindPrimesOf1() {
         assertThat(primesFactorFinder.find(1), is(Collections.singletonList(1)));
     }
 
     @Test
-    public void shouldFindPrimesOf2() {
+    void shouldFindPrimesOf2() {
         assertThat(primesFactorFinder.find(2), is(Collections.singletonList(2)));
     }
 
     @Test
-    public void shouldFindPrimesOf3() {
+    void shouldFindPrimesOf3() {
         assertThat(primesFactorFinder.find(3), is(Collections.singletonList(3)));
     }
 
     @Test
-    public void shouldFindPrimesOf4() {
+    void shouldFindPrimesOf4() {
         assertThat(primesFactorFinder.find(4), is(Arrays.asList(2, 2)));
     }
 
     @Test
-    public void shouldFindPrimesOf6() {
+    void shouldFindPrimesOf6() {
         assertThat(primesFactorFinder.find(6), is(Arrays.asList(2, 3)));
     }
 
     @Test
-    public void shouldFindPrimesOf7() {
+    void shouldFindPrimesOf7() {
         assertThat(primesFactorFinder.find(7), is(Collections.singletonList(7)));
     }
 
     @Test
-    public void shouldFindPrimesOf8() {
+    void shouldFindPrimesOf8() {
         assertThat(primesFactorFinder.find(8), is(Arrays.asList(2, 2, 2)));
     }
 
     @Test
-    public void shouldFindPrimesOf9() {
+    void shouldFindPrimesOf9() {
         assertThat(primesFactorFinder.find(9), is(Arrays.asList(3, 3)));
     }
 
     @Test
-    public void shouldFindPrimesOf12() {
+    void shouldFindPrimesOf12() {
         assertThat(primesFactorFinder.find(12), is(Arrays.asList(2, 2, 3)));
     }
 
     @Test
-    public void shouldFindPrimesOf15() {
+    void shouldFindPrimesOf15() {
         assertThat(primesFactorFinder.find(15), is(Arrays.asList(3, 5)));
     }
 
     @Test
-    public void shouldFindPrimesOf4620() {
+    void shouldFindPrimesOf4620() {
         assertThat(primesFactorFinder.find(4620), is(Arrays.asList(2, 2, 3, 5, 7, 11)));
     }
 
     @Test
-    public void shouldFindPrimesOf4356660() {
+    void shouldFindPrimesOf4356660() {
         assertThat(primesFactorFinder.find(4356660), is(Arrays.asList(2, 2, 3, 5, 7, 11, 23, 41)));
     }
 
     @Test
-    public void shouldFindPrimesOf1024() {
+    void shouldFindPrimesOf1024() {
         assertThat(primesFactorFinder.find(1024), is(Arrays.asList(2, 2, 2, 2, 2, 2, 2, 2, 2, 2)));
     }
 
     @Test
-    public void shouldFindPrimesOf51() {
+    void shouldFindPrimesOf51() {
         assertThat(primesFactorFinder.find(53), is(Collections.singletonList(53)));
     }
 

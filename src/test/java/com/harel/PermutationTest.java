@@ -1,6 +1,6 @@
 package com.harel;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -19,30 +19,30 @@ ibro ibor irbo irob iobr iorb
 rbio rboi ribo riob roib robi
 obir obri oibr oirb orbi orib
  */
-public class PermutationTest {
+class PermutationTest {
 
     @Test
-    public void permutationOfBlankIsCollectionWithBlank() {
+    void permutationOfBlankIsCollectionWithBlank() {
         assertThat(Permutation.of(""), is(Collections.singletonList("")));
     }
 
     @Test
-    public void permutationOfOneLetterIsCollectionWithTheLetter() {
+    void permutationOfOneLetterIsCollectionWithTheLetter() {
         assertThat(Permutation.of("a"), is(Collections.singletonList("a")));
     }
 
     @Test
-    public void permutationOfTwoLetters() {
+    void permutationOfTwoLetters() {
         assertThat(Permutation.of("ab"), is(Arrays.asList("ab", "ba")));
     }
 
     @Test
-    public void permutationOfThreeLetters() {
+    void permutationOfThreeLetters() {
         assertThat(Permutation.of("abc"), is(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba")));
     }
 
     @Test
-    public void permutationOfFourLetters() {
+    void permutationOfFourLetters() {
         verify("abcd", 24);
     }
 
@@ -57,14 +57,12 @@ public class PermutationTest {
     }
 
     @Test
-    public void permutationOfFiveLetters() {
+    void permutationOfFiveLetters() {
         verify("abcde", 120);
     }
 
     @Test
-    public void permutationOfSixLetters() {
+    void permutationOfSixLetters() {
         verify("abcdef", 120 * 6);
     }
-
-
 }

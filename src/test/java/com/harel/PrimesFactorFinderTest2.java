@@ -1,6 +1,6 @@
 package com.harel;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,10 +10,10 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class PrimesFactorFinderTest2 {
+class PrimesFactorFinderTest2 {
 
     @Test
-    public void shouldFindPrimes() {
+    void shouldFindPrimes() {
         assertThat(new PrimesFactorFinder2().primesFactorsOf(1), is(Collections.emptyList()));
         assertThat(new PrimesFactorFinder2().primesFactorsOf(2), is(Collections.singletonList(2)));
         assertThat(new PrimesFactorFinder2().primesFactorsOf(3), is(Collections.singletonList(3)));

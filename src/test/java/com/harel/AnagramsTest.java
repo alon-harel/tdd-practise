@@ -1,6 +1,6 @@
 package com.harel;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,33 +17,33 @@ ibro ibor irbo irob iobr iorb
 rbio rboi ribo riob roib robi
 obir obri oibr oirb orbi orib
  */
-public class AnagramsTest {
+class AnagramsTest {
 
     private Anagrams anagrams = new Anagrams();
 
 
     @Test
-    public void returnEmptyListForEmptyString() {
+    void returnEmptyListForEmptyString() {
         assertThat(anagrams.find(""), is(Collections.singletonList("")));
     }
 
     @Test
-    public void singleLetterReturnsArrayWithThisLetter() {
+    void singleLetterReturnsArrayWithThisLetter() {
         assertThat(anagrams.find("a"), is(Collections.singletonList("a")));
     }
 
     @Test
-    public void handleTwoLettersWord() {
+    void handleTwoLettersWord() {
         assertThat(anagrams.find("ab"), is(Arrays.asList("ab", "ba")));
     }
 
     @Test
-    public void handleThreeLettersWord() {
+    void handleThreeLettersWord() {
         assertThat(anagrams.find("abc"), is(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba")));
     }
 
     @Test
-    public void handleFourLettersWord() {
+    void handleFourLettersWord() {
         assertThat(new HashSet<>(anagrams.find("biro")), is(new HashSet<>(Arrays.asList("biro", "bior", "brio", "broi", "boir", "bori",
                 "ibro", "ibor", "irbo", "irob", "iobr", "iorb",
                 "rbio", "rboi", "ribo", "riob", "roib", "robi",
@@ -51,7 +51,7 @@ public class AnagramsTest {
     }
 
     @Test
-    public void verify6AngramsLength() {
+    void verify6AngramsLength() {
         assertThat(new HashSet<>(anagrams.find("abcdef")).size(), is(6 * 5 * 4 * 3 * 2));
     }
 }
